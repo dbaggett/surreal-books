@@ -8,7 +8,7 @@ class Book(Resource):
         self.library = Library()
         self.book_schema = BookSchema()
 
-    # Retriece Book by ID
+    # Retrieve Book by ID
     def get(self, id):
         book = self.library.check_out(id)
         return self.book_schema.dump(book)
