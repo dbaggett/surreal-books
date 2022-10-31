@@ -18,4 +18,4 @@ class Library(object):
     
     # Index a Book by ID from the "database"
     def check_out(self, book_id: str) -> Book or None:
-        return self.books[book_id]
+        return self.books.get(book_id)
